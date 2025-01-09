@@ -67,8 +67,8 @@ Queens* newQueens(Queens* state,int i)
     Queens* q = emptyQueens(state->n);   
     copyBoard(q->board,state->board,q->n);
     copySolution(q->solution,state->solution,q->n);
-    q->board[i][q->j]=true;
-    q->solution[q->j]=i;
+    q->board[i][state->j]=true;
+    q->solution[state->j]=i;
     q-> j=state->j+1;
     return (q);
 }
@@ -115,7 +115,7 @@ void printSolution(Queens* q){
     {
         printf("%d ",q->solution[i]);
     }
-    printf("\n");
+    printf("\n\n");
 }
 
 void printBoard(Queens* q){
@@ -127,4 +127,6 @@ void printBoard(Queens* q){
         }
         printf("\n");
     }
+    printf("\n");
+
 }
