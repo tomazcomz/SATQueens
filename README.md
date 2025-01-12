@@ -7,6 +7,10 @@ The first part of the first homework task compiles by running `sh compilequeens.
 The second and third parts of the first homework task are present in the `SATqueens.ipyb` jupyter notebook.
 
 
+## Students:
+
 Francisco Silva up202109000
+
 Nele Bringmann up
+
 Tomás Azevedo up202107313

@@ -2,6 +2,7 @@
 #include <stdio.h>
 #include <stdlib.h>
 #include "queens.h"
+#include <time.h>
 
 
 //TODO estou a escrever em null
@@ -61,6 +62,7 @@ int main(){
     printf("How many Queens? \n");
     scanf("%d",&n);
     printf("Performing DFS in %d Queens\n",n);
+    time_t begin = time(NULL);
     Queens* s=emptyQueens(n);
     Node* root = (Node*)malloc(sizeof(Node));
     root->state = s;
@@ -71,6 +73,11 @@ int main(){
     bool res=base_dfs(root);
     if (!res)
         printf("No solution found.");
+    time_t end = time(NULL);
+    double time_spent = difftime(end, begin);
+    printf("Took %d seconds to find a solution", time_spent);
     freeNode(root);
     return 0;
 }
+
+//TODO iterate cycle for n queens and print plot.
